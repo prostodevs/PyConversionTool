@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-def milesToKm():
+def miles_kilometers():
     print("\nthis will convert miles to kilometers\n")
 
-def kmToMiles():
+def kilometers_miles():
     print("\nthis will convert kilometers to miles\n")
