@@ -18,8 +18,11 @@ What is the purpose of putting up this repo?
 
 ### Prerequisites
 
-What things are needed to install the software and how to install them. For now, maybe copy in
-"how to install python and python3 using apt."
+Verify python3 is installed on the current system. 
+
+From the terminal at root directory, run the command 'python3 --version'
+
+If a version is presented, no additional installations are necessary. If an error is provided, see the Python website (below) for assistance with installation.
 
 ## Built With
 
@@ -27,4 +30,4 @@ What things are needed to install the software and how to install them. For now,
 
 ## Authors
 
-* **Justin Stowe** - *Initial work* - [YourWebsite](https://example.com/)
+* **Justin Stowe** - *Initial work* - [ProStoDevs](https://stat-llc.com/)

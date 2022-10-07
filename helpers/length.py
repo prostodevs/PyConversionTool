@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Alta3 Student Project | JStowe
+""" Alta3 Student Project | J Stowe
     Length Conversion Controller """
 
 def try_catch():

@@ -5,7 +5,6 @@
 # error catching for user input
 from helpers.length import str_call
 
-
 def try_catch():
     """User input error handling"""
     is_valid = False
@@ -19,35 +18,33 @@ def try_catch():
             is_valid = True
             return entry
 
+
 # 1: conversion functions for ounces : others
 def ounces_pounds():
     user_input = try_catch()
     pounds = user_input * (0.062500)
     print(f"{user_input} ounces is {pounds:.2f} pounds")
 
-
 def ounces_tons():
     user_input = try_catch()
     tons = user_input * (0.000031250)
     print(f"{user_input} ounces is {tons:.9f} tons")
-
 
 def ounces_grams():
     user_input = try_catch()
     grams = user_input / (.035274)
     print(f"{user_input} ounces is {grams:.2f} grams")
 
-
 def ounces_kilograms():
     user_input = try_catch()
     kilograms = user_input / (35.274)
-    print(f"{user_input} ounces is {kilograms:.9f} kilograms")
-
+    print(f"{user_input} ounces is {kilograms:.7f} kilograms")
 
 def ounces_tonnes():
     user_input = try_catch()
     tonnes = user_input / (35274)
     print(f"{user_input} ounces is {tonnes:.9f} tonnes")
+
 
 # 2: conversion functions for pounds : others
 def pounds_ounces():
@@ -55,132 +52,132 @@ def pounds_ounces():
     ounces = user_input * (16)
     print(f"{user_input} pounds is {ounces:.2f} ounces")
 
-
 def pounds_tons():
     user_input = try_catch()
     tons = user_input * (0.00050000)
     print(f"{user_input} pounds is {tons:.9f} tons")
 
-
 def pounds_grams():
     user_input = try_catch()
     grams = user_input / (0.0022046)
-    print(f"{user_input} pounds is {grams:.9f} grams")
-
+    print(f"{user_input} pounds is {grams:.2f} grams")
 
 def pounds_kilograms():
     user_input = try_catch()
     kilograms = user_input / (2.2046)
-    print(f"{user_input} pounds is {kilograms:.9f} kilograms")
-
+    print(f"{user_input} pounds is {kilograms:.4f} kilograms")
 
 def pounds_tonnes():
     user_input = try_catch()
     tonnes = user_input / (2204.6)
     print(f"{user_input} pounds is {tonnes:.9f} tonnes")
 
+
 # 3: conversion functions for tons : others
-
-
 def tons_ounces():
     user_input = try_catch()
     ounces = user_input * (32000)
     print(f"{user_input} tons is {ounces:.2f} ounces")
-
 
 def tons_pounds():
     user_input = try_catch()
     pounds = user_input * (2000)
     print(f"{user_input} tons is {pounds:.2f} pounds")
 
-
 def tons_grams():
     user_input = try_catch()
     grams = user_input / (0.0000011023)
     print(f"{user_input} tons is {grams:.9f} grams")
 
-
 def tons_kilograms():
     user_input = try_catch()
     kilograms = user_input / (.0011023)
-    print(f"{user_input} tons is {kilograms:.9f} kilograms")
-
+    print(f"{user_input} tons is {kilograms:.2f} kilograms")
 
 def tons_tonnes():
     user_input = try_catch()
     tonnes = user_input / (1.1023)
-    print(f"{user_input} tons is {tonnes:.9f} tonnes")
+    print(f"{user_input} tons is {tonnes:.2f} tonnes")
+
 
 # 4: conversion functions for grams : others
-
-
 def grams_ounces():
-    print()
-
+    user_input = try_catch()
+    ounces = user_input * (0.035274)
+    print(f"{user_input} grams is {ounces:.2f} ounces")
 
 def grams_pounds():
-    print()
-
+    user_input = try_catch()
+    pounds = user_input * (0.0022046)
+    print(f"{user_input} grams is {pounds:.2f} pounds")
 
 def grams_tons():
-    print()
-
-
-def grams_decigrams():
-    print()
-
+    user_input = try_catch()
+    tons = user_input * (0.0000011023)
+    print(f"{user_input} grams is {tons:.9f} tons")
 
 def grams_kilograms():
-    print()
-
+    user_input = try_catch()
+    kilograms = user_input / (1000)
+    print(f"{user_input} grams is {kilograms:.7f} kilograms")
 
 def grams_tonnes():
-    print()
+    user_input = try_catch()
+    tonnes = user_input / (1000000)
+    print(f"{user_input} grams is {tonnes:.9f} tonnes")
+
 
 # 5: conversion functions for kilograms : others
-
-
 def kilograms_ounces():
-    print()
-
+    user_input = try_catch()
+    ounces = user_input * (35.274)
+    print(f"{user_input} kilograms is {ounces:.2f} ounces")
 
 def kilograms_pounds():
-    print()
-
+    user_input = try_catch()
+    pounds = user_input * (2.2046)
+    print(f"{user_input} kilograms is {pounds:.2f} pounds")
 
 def kilograms_tons():
-    print()
-
+    user_input = try_catch()
+    tons = user_input * (.0011023)
+    print(f"{user_input} kilograms is {tons:.2f} tons")
 
 def kilograms_grams():
-    print()
-
+    user_input = try_catch()
+    grams = user_input / (0.001)
+    print(f"{user_input} kilograms is {grams:.2f} grams")
 
 def kilograms_tonnes():
-    print()
+    user_input = try_catch()
+    tonnes = user_input / (1000)
+    print(f"{user_input} kilograms is {tonnes:.4f} tonnes")
 
 # 6: conversion functions for tonnes : others
-
-
 def tonnes_ounces():
-    print()
-
+    user_input = try_catch()
+    ounces = user_input * (35274)
+    print(f"{user_input} tonnes is {ounces:.2f} ounces")
 
 def tonnes_pounds():
-    print()
-
+    user_input = try_catch()
+    pounds = user_input * (2204.6)
+    print(f"{user_input} tonnes is {pounds:.2f} pounds")
 
 def tonnes_tons():
-    print()
-
+    user_input = try_catch()
+    tons = user_input * (1.1023)
+    print(f"{user_input} tonnes is {tons:.2f} tons")
 
 def tonnes_grams():
-    print()
-
+    user_input = try_catch()
+    grams = user_input / (0.000001)
+    print(f"{user_input} tonnes is {grams:.2f} grams")
 
 def tonnes_kilograms():
-    print()
-
+    user_input = try_catch()
+    kilograms = user_input / (0.001)
+    print(f"{user_input} tonnes is {kilograms:.2f} kilograms")
 
 weight_menu = {
     1: {

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-""" Alta3 Student Project | JStowe
-    Temperature conversion Functions """
+""" Alta3 Student Project | J Stowe
+    Temperature conversion Controller """
 
 
 def fahrenheit_celsius(entry):
