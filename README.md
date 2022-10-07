@@ -1,4 +1,4 @@
-# PyConverstionTool
+# PyConversionTool
 A Python tool for simple unit conversion
 
 The purpose of this tool is to assist with common conversions in daily life:
