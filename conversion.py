@@ -17,7 +17,7 @@ def main_menu():
     """Primary options menu"""
     exit_chk = False
     while (exit_chk is not True):
-        print("Select a conversion to perform?\n"
+        print("Select a conversion to perform:\n"
               + "1. Temperature Conversion\n"
                 + "2. Length Conversion\n"
                 + "3. Weight Conversion\n"
