@@ -6,9 +6,6 @@ The purpose of this tool is to assist with common conversions in daily life:
 - Weight conversion (ex: pounds to grams)
 - Temperature conversion (ex: Fahrenheit to Celsius)
 
-One Paragraph of your project description goes here. Describe what you're trying to do.
-What is the purpose of putting up this repo?
-
 ## Getting Started
 
 1. Place script folder in desired directory
@@ -18,9 +15,7 @@ What is the purpose of putting up this repo?
 
 ### Prerequisites
 
-Verify python3 is installed on the current system. 
-
-From the terminal at root directory, run the command 'python3 --version'
+Verify python3 is installed on the current system: from the terminal at root directory, run the command 'python3 --version'
 
 If a version is presented, no additional installations are necessary. If an error is provided, see the Python website (below) for assistance with installation.
 
