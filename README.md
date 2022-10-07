@@ -27,6 +27,7 @@ If a version is presented, no additional installations are necessary. If an erro
 ## Built With
 
 * [Python](https://www.python.org/) - The coding language used, version 3.9.6
+* [Pylint](https://docs.pylint.org/) - installed using pip3 (out-of-box with Python3)
 
 ## Authors
 
