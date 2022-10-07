@@ -1,16 +1,22 @@
 #!/usr/bin/env python3
+""" Alta3 Student Project | J Stowe
+    Common Conversion Tool - Primary controller"""
 
-# used for 'surprise me' option
+# import for 3rd party libraries
 import random
+import sys
+import time
 
 # import helper library
 from helpers import length
 from helpers import temperature
+from helpers import weight
 
 
 def main_menu():
-    Exit = False
-    while (Exit != True):
+    """Primary options menu"""
+    exit_chk = False
+    while (exit_chk is not True):
         print("What conversion would you like to perform?\n"
               + "1. Temperature Conversion\n"
                 + "2. Length Conversion\n"
@@ -18,7 +24,7 @@ def main_menu():
                 + "4. Surprise!\n"
                 + "5. Exit\n")
 
-        choice = input()
+        choice = input("Enter: ")
         if choice == '1':
             temperature_menu()
         elif choice == '2':
@@ -28,25 +34,27 @@ def main_menu():
         elif choice == '4':
             surprise()
         elif choice == '5':
-            Exit = True
+            exit_chk = True
         else:
             print("That is not a valid choice, please select again.\n")
-
+        print("\n")
+        time.sleep(1)
 
 def temperature_menu():
+    """Temperature menu controller"""
     # input error handling (passes value to helper)
     def try_catch(temp_unit):
         while True:
             try:
                 entry = float(
-                    input("What is the temperature in {temp_unit}?\nEnter: "))
+                    input(f"What is the temperature in {temp_unit}?\nEnter: "))
             except ValueError:
                 print("That is not a valid number!!")
             else:
                 return entry
 
     menu = False
-    while (menu != True):
+    while (menu is not True):
         print("What temperature unit would you like to convert?\n"
               + "1. Fahrenheit to Celsius\n"
                 + "2. Fahrenheit to Kelvin\n"
@@ -56,7 +64,7 @@ def temperature_menu():
                 + "6. Kelvin to Celsius\n"
                 + "7. Main Menu\n")
 
-        choice = input()
+        choice = input("Enter:")
         if choice == '1':
             temperature.fahrenheit_celsius(try_catch('Fahrenheit'))
         elif choice == '2':
@@ -73,9 +81,11 @@ def temperature_menu():
             menu = True
         else:
             print("That is not a valid choice, please select again.\n")
-
+        print("\n")
+        time.sleep(2)
 
 def length_menu():
+    """Length conversion controller"""
     while True:
         print("What length unit would you like to convert?\n"
               + "1. Inches\n"
@@ -86,7 +96,7 @@ def length_menu():
                 + "6. Meters\n"
                 + "7. Kilometers\n"
                 + "8. Main Menu\n")
-        choice_one = int(input())
+        choice_one = int(input("Enter: "))
 
         if choice_one == 8:
             break
@@ -99,26 +109,50 @@ def length_menu():
                 + "5. Millimeters\n"
                 + "6. Meters\n"
                 + "7. Kilometers\n")
-        choice_two = int(input())
-
-        length.list[choice_one][choice_two]()
-
+        choice_two = int(input("Enter: "))
+        length.length_menu[choice_one][choice_two]()
+        print("\n")
+        time.sleep(2)
 
 def weight_menu():
-    print("This is the weight menu")
+    """Weight conversion controller"""
+    while True:
+        print("What weight would you like to convert?\n"
+              + "1. Ounces\n"
+                + "2. Pounds\n"
+                + "3. Tons\n"
+                + "4. Grams\n"
+                + "5. Kilograms\n"
+                + "6. Tonnes\n"
+                + "7. Main Menu\n")
+        choice_one = int(input("Enter: "))
 
+        if choice_one == 7:
+            break
+
+        print("\nAnd what are you converting to?\n"
+              + "1. Ounces\n"
+                + "2. Pounds\n"
+                + "3. Tons\n"
+                + "4. Grams\n"
+                + "5. Kilograms\n"
+                + "6. Tonnes\n")
+        choice_two = int(input("Enter: "))
+        weight.weight_menu[choice_one][choice_two]()
+        print("\n")
+        time.sleep(2)
 
 def surprise():
+    """Surprise option menu"""
     print("This will be a surprise!!!")
 
-
 def main():
+    """Main execution"""
     print("Welcome to the Py Conversion Tool!")
     main_menu()
     print("Thank you for using the Py Conversion Tool!\n"
-          + "Have a lovely day!")
-    exit()
-
+        + "Have a lovely day!\n")
+    sys.exit()
 
 if __name__ == "__main__":
     main()

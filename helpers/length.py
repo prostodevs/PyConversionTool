@@ -1,35 +1,35 @@
 #!/usr/bin/env python3
 """ Alta3 Student Project | JStowe
-    Length conversion formulae """
-
+    Length Conversion Controller """
 
 def try_catch():
+    """User input error handling"""
     is_valid = False
-    while (is_valid != True):
+    while (is_valid is not True):
         try:
             entry = float(
-                input(f"What is the input length in?\nEnter: "))
+                input("\nWhat is the input length?\nEnter: "))
         except ValueError:
             print("That is not a valid number!!")
         else:
             is_valid = True
             return entry
 
-# string function to satisfy dict call in conversion.py
+## string function to satisfy dict call in conversion.py
 def str_call():
+    """String placeholder for 1:1 conversion in dictionary"""
     print("You already know that!!")
 
-## inch conversion functions
+## 1:inch conversion functions
 def inch_feet():
     user_input = try_catch()
     feet = user_input * (1 / 12)
     print(f"{user_input} inches is {feet:.2f} feet.")
 
-
 def inch_yards():
-    input = try_catch()
+    user_input = try_catch()
     yards = input * (1 / (12 * 3))
-    print(f"{input} inches is {yards:.3f} yards")
+    print(f"{user_input} inches is {yards:.3f} yards")
 
 
 def inch_miles():
@@ -164,8 +164,116 @@ def miles_kilometers():
     kilometers = user_input * (1609344 / 1000 / 1000)
     print(f"{user_input} miles is {kilometers:.4f} kilometers")
 
-# dictionary of corresponding menu commands
-list = {
+## millimeters conversion functions
+def millimeters_inches():
+    user_input = try_catch()
+    inches = user_input * (1 / .03937)
+    print(f"{user_input} millimeters is {inches:.2f} inches")
+
+
+def millimeters_feet():
+    user_input = try_catch()
+    feet = user_input * (.0032808)
+    print(f"{user_input} millimeters is {feet:.4f} feet")
+
+
+def millimeters_yards():
+    user_input = try_catch()
+    yards = user_input * (.0010936)
+    print(f"{user_input} millimeters is {yards:.7f} miles")
+
+
+def millimeters_miles():
+    user_input = try_catch()
+    miles = user_input * (.00000062137)
+    print(f"{user_input} millimeters is {miles:.9f} miles")
+
+
+def millimeters_meters():
+    user_input = try_catch()
+    meters = user_input * (1 / 1000)
+    print(f"{user_input} millimeters is {meters:.7f} meters")
+
+
+def millimeters_kilometers():
+    user_input = try_catch()
+    kilometers = user_input * (1 / 1000 / 1000)
+    print(f"{user_input} millimeters is {kilometers:.9f} kilometers")
+
+## meters conversion functions
+def meters_inches():
+    user_input = try_catch()
+    inches = user_input * (1 / .03937)
+    print(f"{user_input} meters is {inches:.2f} inches")
+
+
+def meters_feet():
+    user_input = try_catch()
+    feet = user_input * (.0032808)
+    print(f"{user_input} meters is {feet:.4f} feet")
+
+
+def meters_yards():
+    user_input = try_catch()
+    yards = user_input * (.0010936)
+    print(f"{user_input} meters is {yards:.7f} miles")
+
+
+def meters_miles():
+    user_input = try_catch()
+    miles = user_input * (.00000062137)
+    print(f"{user_input} meters is {miles:.9f} miles")
+
+
+def meters_millimeters():
+    user_input = try_catch()
+    millimeters = user_input * (1000 / 1)
+    print(f"{user_input} meters is {millimeters:.7f} millimeters")
+
+
+def meters_kilometers():
+    user_input = try_catch()
+    kilometers = user_input * (1 / 1000)
+    print(f"{user_input} meters is {kilometers:.9f} kilometers")
+
+## kilometers conversion functions
+def kilometers_inches():
+    user_input = try_catch()
+    inches = user_input * (39369.6)
+    print(f"{user_input} meters is {inches:.2f} inches")
+
+
+def kilometers_feet():
+    user_input = try_catch()
+    feet = user_input * (3280.8)
+    print(f"{user_input} meters is {feet:.4f} feet")
+
+
+def kilometers_yards():
+    user_input = try_catch()
+    yards = user_input * (1093.6)
+    print(f"{user_input} meters is {yards:.7f} miles")
+
+
+def kilometers_miles():
+    user_input = try_catch()
+    miles = user_input * (.62137)
+    print(f"{user_input} meters is {miles:.9f} miles")
+
+
+def kilometers_millimeters():
+    user_input = try_catch()
+    millimeters = user_input * (1000 * 1000 / 1)
+    print(f"{user_input} meters is {millimeters:.7f} millimeters")
+
+
+def kilometers_meters():
+    user_input = try_catch()
+    meters = user_input * (1000 / 1)
+    print(f"{user_input} meters is {meters:.9f} meters")
+
+# dictionary for corresponding menu selections
+length_menu = {
     1: {
         1: str_call,
         2: inch_feet,
@@ -213,21 +321,21 @@ list = {
         7: millimeters_kilometers
     },
     6: {
-        1: miles_inches,
-        2: miles_feet,
-        3: miles_yards,
-        4: str_call,
-        5: miles_millimeters,
-        6: miles_meters,
-        7: miles_kilometers
+        1: meters_inches,
+        2: meters_feet,
+        3: meters_yards,
+        4: meters_miles,
+        5: meters_millimeters,
+        6: str_call,
+        7: meters_kilometers
     },
     7: {
-        1: miles_inches,
-        2: miles_feet,
-        3: miles_yards,
-        4: str_call,
-        5: miles_millimeters,
-        6: miles_meters,
-        7: miles_kilometers
+        1: kilometers_inches,
+        2: kilometers_feet,
+        3: kilometers_yards,
+        4: kilometers_miles,
+        5: kilometers_millimeters,
+        6: kilometers_meters,
+        7: str_call
     },
 }
